@@ -1,3 +1,6 @@
+## 全网最全ERC20智能合约大全
+
+
 如果你想在以太坊ETH上发行一个ERC20的代币，你需要了解ERC20代币合约，通读本文以后，你将获得一个比较厉害的技能，希望你能学会。下图是基于ETH发行的ERC20版的USDT，你可以大概了解一下一个基本的ERC20代币的一些信息：
 [https://cn.etherscan.com/token/0xdac17f958d2ee523a2206206994597c13d831ec7](https://cn.etherscan.com/token/0xdac17f958d2ee523a2206206994597c13d831ec7)
 
