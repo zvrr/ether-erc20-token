@@ -25,11 +25,14 @@ contract ERC20 {
 
 下面对上面的内容做一个简单的解释：
 
- **name**  > 返回ERC20代币的名字，例如”My test token”。
+ **name**  
+> 返回ERC20代币的名字，例如”My test token”。
 
- **symbol**  > 返回代币的简称，例如：MTT，这个也是我们一般在代币交易所看到的名字。
+ **symbol**  
+> 返回代币的简称，例如：MTT，这个也是我们一般在代币交易所看到的名字。
 
- **decimals**  > 返回token使用的小数点后几位。比如如果设置为3，就是支持0.001表示。
+ **decimals**  
+> 返回token使用的小数点后几位。比如如果设置为3，就是支持0.001表示。
 
  **totalSupply**  返回token的总供应量
 
@@ -37,7 +40,8 @@ contract ERC20 {
 
  **transfer**  从代币合约的调用者地址上转移_value的数量token到的地址_to，并且必须触发Transfer事件。
 
- **transferFrom**   > 从地址_from发送数量为_value的token到地址_to,必须触发Transfer事件。transferFrom方法用于允许合同代理某人转移token。条件是from账户必须经过了approve。这个后面会举例说明。
+ **transferFrom**   
+> 从地址_from发送数量为_value的token到地址_to,必须触发Transfer事件。transferFrom方法用于允许合同代理某人转移token。条件是from账户必须经过了approve。这个后面会举例说明。
 
  **approve**  允许_spender多次取回您的帐户，最高达_value金额。 如果再次调用此函数，它将以_value覆盖当前的余量。
 
