@@ -34,27 +34,34 @@ contract ERC20 {
  **decimals**  
 > 返回token使用的小数点后几位。比如如果设置为3，就是支持0.001表示。
 
- **totalSupply**  返回token的总供应量
+ **totalSupply**  
+> 返回token的总供应量
 
- **balanceOf**  返回某个地址(账户)的账户余额
+ **balanceOf**  
+> 返回某个地址(账户)的账户余额
 
- **transfer**  从代币合约的调用者地址上转移_value的数量token到的地址_to，并且必须触发Transfer事件。
+ **transfer**  
+> 从代币合约的调用者地址上转移_value的数量token到的地址_to，并且必须触发Transfer事件。
 
  **transferFrom**   
 > 从地址_from发送数量为_value的token到地址_to,必须触发Transfer事件。transferFrom方法用于允许合同代理某人转移token。条件是from账户必须经过了approve。这个后面会举例说明。
 
- **approve**  允许_spender多次取回您的帐户，最高达_value金额。 如果再次调用此函数，它将以_value覆盖当前的余量。
+ **approve**  
+> 允许_spender多次取回您的帐户，最高达_value金额。 如果再次调用此函数，它将以_value覆盖当前的余量。
 
- **allowance**  返回_spender仍然被允许从_owner提取的金额。
+ **allowance**  
+> 返回_spender仍然被允许从_owner提取的金额。
 
 后面三个方法不好理解，这里还需要补充说明一下：
-
 approve是授权第三方（比如某个服务合约）从发送者账户转移代币，然后通过 transferFrom() 函数来执行具体的转移操作。
 
 举例说明，如果账户A有1000个ETH，想允许B账户随意调用他的100个ETH，过程如下：
 
+```
 1. A账户按照以下形式调用approve函数approve(B,100)  
 2. B账户想用这100个ETH中的10个ETH给C账户，调用transferFrom(A, C, 10)  
 3. 调用allowance(A, B)可以查看B账户还能够调用A账户多少个token  
+```
 
-如何发行ERC20代币
+
+ **如何发行ERC20代币**  
